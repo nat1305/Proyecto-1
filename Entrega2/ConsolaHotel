@@ -19,12 +19,13 @@ public class ConsolaHotel
                 mostrarCatalogo();
                 int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
                 if (opcion_seleccionada == 1)
-                    ejecutarEmpleado();
-                else if (opcion_seleccionada == 2 && calculadora != null)
-                    ejecutarRecepcionista();
-                else if (opcion_seleccionada == 3 && calculadora != null)
-                    ejecutarAdministrador();
+                    ejecutaringreso();
                 else if (opcion_seleccionada == 0)
+                {
+                    System.out.prinln("saliendo de la aplicacion ...");
+                    continuar = false;
+                }
+                else if(calculadora == null)
                 {
                     System.out-println("para poder ejecutar esta opcion primero debe cargar un arcgivo de catalogo.");
                 }
@@ -45,27 +46,17 @@ public class ConsolaHotel
     public void mostrarMenu()
     {
         System.out.println("\nOpciones de la aplicación\n");
-		System.out.println("1. Ingresar como recepcionista");
-		System.out.println("2. Ingresar como administrador");
-		System.out.println("3. Ingresar como empleado");
+		System.out.println("1. Ingresar ");
 		System.out.println("0. Salir de la aplicación\n");  
     }
     '''
-    muestra el metodo de ingreso si el usuari es el recepcionista
+    la persona ingresa su nombre de usuario (el cual debe estar compuesto por una letra al inicio para identificar 
+    que rol ocupa E(empleado), A(administrador), R(recepcionista) y adicionalmente el numero de documento) mas la contraseña
     '''
-    private void ejecutarRecepcionista()
-    {
-
-    }
-
-    private void ejecutarAdministrador()
-    {
-        
-    }
-
-    private void ejecutarEmpleado()
-    {
-        
-    }
-}
+    private void ejecutarIngresar()
+    
+    string usuario = input("por favor ingresa tu nombre de usuario")
+    string contraseña = input("por favor ingrasa tu contraseña")
+    
+    if (usuario && contraseña) in Usuarios;
 
