@@ -55,8 +55,31 @@ public class ConsolaHotel
     '''
     private void ejecutarIngresar()
     
-    string usuario = input("por favor ingresa tu nombre de usuario")
-    string contraseña = input("por favor ingrasa tu contraseña")
+    string usuario = input("por favor ingresa tu nombre de usuario");
+    string contraseña = input("por favor ingrasa tu contraseña");
     
-    if (usuario && contraseña) in Usuarios;
+    if ((usuario && contraseña) in Usuarios)
+    { 
+        if (usuario == administrador)
+        {
+            System.out.println("\nTienes acceso a");
+            System.out.println("1. Tarifas por fecha ");
+            System.out.println("2. Reservas");
+            System.out.println("3. Servicios");
+            System.out.println("4. habitaciones si tarifa");
+        }
+        if (usuario == empleado)
+        {
+            System.out.println("\nTienes acceso a: ");
+            System.out.println("1. Inventario Hotel");
+            System.out.println("2. Reservas");
+        }
+        if (usuario == recepcionista)
+        {
+            System.out.println("\n Tienes acceso a: ");
+            System.out.println("3. Factura");
 
+        }
+    }
+
+}
