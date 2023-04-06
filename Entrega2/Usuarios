@@ -1,7 +1,0 @@
-ArrayList<Administrador> list = new ArrayList<Administrador>();
-// Añadimos elementos 
-list.add("A1047035647")
-list.add("A1048065691")
-list.add("A1002160162")
-list.add("A32769843")
-list.add("A3716067")
